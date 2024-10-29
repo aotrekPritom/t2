@@ -23,7 +23,6 @@ router.get('/teacher-courses',auth(UserRole.TEACHER,UserRole.ADMIN), CourseContr
 // Retrieve a list of single course.
 router.get(
   '/:id',
-  auth(UserRole.TEACHER, UserRole.USER),
   CourseControllers.getSingleCourseById,
 );
 // enroll course

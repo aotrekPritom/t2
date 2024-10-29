@@ -15,7 +15,7 @@ router.post(
 // get session details
 router.get(
   '/:sessionId',
-  auth(UserRole.USER),
+  auth(UserRole.USER,UserRole.TEACHER),
   SessionControllers.getSessionDetails,
 );
 

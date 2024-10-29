@@ -16,7 +16,6 @@ const login = async (payload: TLoginData) => {
     throw new AppError(404, 'User does not exist!');
   }
 
-  console.log(userData);
   const isPasswordCorrect = await bcrypt.compare(
     payload.password,
     userData.password,
